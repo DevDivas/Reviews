@@ -5,5 +5,4 @@ jobs:
       - image: debian:stretch
     steps:
       - checkout
-      - run:
-          test
+      - run: echo "A first hello"
