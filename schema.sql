@@ -2,6 +2,8 @@ DROP DATABASE IF EXISTS reviews;
 
 CREATE DATABASE reviews;
 
+SET GLOBAL local_infile = 'ON';
+
 USE reviews;
 
 CREATE TABLE users (
@@ -22,6 +24,7 @@ CREATE TABLE reviews (
   cleanliness int NOT NULL,
   location int NOT NULL,
   check_in int NOT NULL,
+  value int NOT NULL,
   average int NOT NULL,
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES users(id)

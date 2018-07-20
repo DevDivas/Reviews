@@ -51,7 +51,7 @@ const reviews = (numOfReview) => {
 		let value = ranNum(6);
 		let average = Math.round((accuracy + communication + cleanliness + location + check_in + value) / 6);
 		let date = randomDate(new Date(1800, 0, 1), new Date())
-		csv = csv + `\n ${i + 1}, ${ranNum(40)}, ${room_id}, ${date}, ${randomText(words)}, ${accuracy}, ${communication}, ${cleanliness}, ${location}, ${check_in}, ${value}, ${average}`
+		csv = csv + `\n ${i + 1}, ${ranNum(40)}, ${room_id}, ${date}, '${randomText(words)}', ${accuracy}, ${communication}, ${cleanliness}, ${location}, ${check_in}, ${value}, ${average}`
 	}
 	return csv;
 }

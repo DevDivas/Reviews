@@ -7,7 +7,10 @@
   "engines": {
     "node": ">=6.13.0"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "seed" : "node data-generator.js | mysql --local-infile -u root -p < schema.sql"
+  },
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
@@ -29,6 +32,7 @@
   },
   "devDependencies": {
     "eslint": "^5.1.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "mysql": "^2.16.0"
   }
 }
