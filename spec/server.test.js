@@ -11,7 +11,6 @@ describe('Test for path', () => {
 			expect(response.statusCode).toBe(201);
 		});
 	});
-
 	test('Data should exist', () => {
 		return request(server).get('/rooms/1/reviews').then(response => {
 			expect(response).toBeDefined();
