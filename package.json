@@ -10,6 +10,7 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "seed": "node data-generator.js | mysql --local-infile -u root -p < schema.sql",
+    "react-dev": "webpack -d --watch",
     "test": "jest --forceExit"
   },
   "dependencies": {
