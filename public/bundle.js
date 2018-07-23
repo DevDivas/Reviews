@@ -86,6 +86,78 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./client/src/components/User_reviews_entry.jsx":
+/*!******************************************************!*\
+  !*** ./client/src/components/User_reviews_entry.jsx ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction UserReviewsEntry(props) {\n  return React.createElement(\n    'div',\n    null,\n    'user review entry'\n  );\n}\n\nexports.default = UserReviewsEntry;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2NvbXBvbmVudHMvVXNlcl9yZXZpZXdzX2VudHJ5LmpzeC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9jbGllbnQvc3JjL2NvbXBvbmVudHMvVXNlcl9yZXZpZXdzX2VudHJ5LmpzeD9hMzQ4Il0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IFJlYWN0ID0gcmVxdWlyZSgncmVhY3QnKTtcblxuZnVuY3Rpb24gVXNlclJldmlld3NFbnRyeShwcm9wcykge1xuICByZXR1cm4gPGRpdj51c2VyIHJldmlldyBlbnRyeTwvZGl2Pjtcbn1cblxuZXhwb3J0IGRlZmF1bHQgVXNlclJldmlld3NFbnRyeTsiXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./client/src/components/User_reviews_entry.jsx\n");
+
+/***/ }),
+
+/***/ "./client/src/components/avg_rating.jsx":
+/*!**********************************************!*\
+  !*** ./client/src/components/avg_rating.jsx ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction AvgRating(props) {\n  return React.createElement(\n    'div',\n    null,\n    'AVERAGE RATING'\n  );\n}\n\nexports.default = AvgRating;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2NvbXBvbmVudHMvYXZnX3JhdGluZy5qc3guanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vY2xpZW50L3NyYy9jb21wb25lbnRzL2F2Z19yYXRpbmcuanN4P2NmNDUiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgUmVhY3QgPSByZXF1aXJlKCdyZWFjdCcpO1xuXG5mdW5jdGlvbiBBdmdSYXRpbmcocHJvcHMpIHtcbiAgcmV0dXJuIDxkaXY+QVZFUkFHRSBSQVRJTkc8L2Rpdj47XG59XG5cbmV4cG9ydCBkZWZhdWx0IEF2Z1JhdGluZztcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./client/src/components/avg_rating.jsx\n");
+
+/***/ }),
+
+/***/ "./client/src/components/ratings.jsx":
+/*!*******************************************!*\
+  !*** ./client/src/components/ratings.jsx ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction Ratings(props) {\n  return React.createElement(\n    'div',\n    null,\n    'Ratings'\n  );\n}\n\nexports.default = Ratings;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2NvbXBvbmVudHMvcmF0aW5ncy5qc3guanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vY2xpZW50L3NyYy9jb21wb25lbnRzL3JhdGluZ3MuanN4PzVjM2IiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgUmVhY3QgPSByZXF1aXJlKCdyZWFjdCcpO1xuXG5mdW5jdGlvbiBSYXRpbmdzKHByb3BzKSB7XG4gIHJldHVybiA8ZGl2PlJhdGluZ3M8L2Rpdj47XG59XG5cbmV4cG9ydCBkZWZhdWx0IFJhdGluZ3M7XG4iXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./client/src/components/ratings.jsx\n");
+
+/***/ }),
+
+/***/ "./client/src/components/search.jsx":
+/*!******************************************!*\
+  !*** ./client/src/components/search.jsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction Search(props) {\n  return React.createElement('input', null);\n}\n\nexports.default = Search;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2NvbXBvbmVudHMvc2VhcmNoLmpzeC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9jbGllbnQvc3JjL2NvbXBvbmVudHMvc2VhcmNoLmpzeD9hNWM1Il0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IFJlYWN0ID0gcmVxdWlyZSgncmVhY3QnKTtcblxuZnVuY3Rpb24gU2VhcmNoKHByb3BzKSB7XG4gIHJldHVybiA8aW5wdXQgLz47XG59XG5cbmV4cG9ydCBkZWZhdWx0IFNlYXJjaDtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./client/src/components/search.jsx\n");
+
+/***/ }),
+
+/***/ "./client/src/components/total_number_reviews.jsx":
+/*!********************************************************!*\
+  !*** ./client/src/components/total_number_reviews.jsx ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction TotalNumberReviews(props) {\n  return React.createElement(\n    'div',\n    null,\n    'TOTAL NUMBER OF REVIEWS'\n  );\n}\n\nexports.default = TotalNumberReviews;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2NvbXBvbmVudHMvdG90YWxfbnVtYmVyX3Jldmlld3MuanN4LmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2NsaWVudC9zcmMvY29tcG9uZW50cy90b3RhbF9udW1iZXJfcmV2aWV3cy5qc3g/Yjg1YSJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBSZWFjdCA9IHJlcXVpcmUoJ3JlYWN0Jyk7XG5cbmZ1bmN0aW9uIFRvdGFsTnVtYmVyUmV2aWV3cyhwcm9wcykge1xuICByZXR1cm4gPGRpdj5UT1RBTCBOVU1CRVIgT0YgUkVWSUVXUzwvZGl2Pjtcbn1cblxuZXhwb3J0IGRlZmF1bHQgVG90YWxOdW1iZXJSZXZpZXdzO1xuIl0sIm1hcHBpbmdzIjoiOzs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./client/src/components/total_number_reviews.jsx\n");
+
+/***/ }),
+
+/***/ "./client/src/components/user_reviews.jsx":
+/*!************************************************!*\
+  !*** ./client/src/components/user_reviews.jsx ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _User_reviews_entry = __webpack_require__(/*! ./User_reviews_entry.jsx */ \"./client/src/components/User_reviews_entry.jsx\");\n\nvar _User_reviews_entry2 = _interopRequireDefault(_User_reviews_entry);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nfunction UserReviews(props) {\n  return React.createElement(\n    'ul',\n    null,\n    React.createElement(_User_reviews_entry2.default, null)\n  );\n}\n\nexports.default = UserReviews;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2NvbXBvbmVudHMvdXNlcl9yZXZpZXdzLmpzeC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9jbGllbnQvc3JjL2NvbXBvbmVudHMvdXNlcl9yZXZpZXdzLmpzeD9lNmJkIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBVc2VyUmV2aWV3c0VudHJ5IGZyb20gJy4vVXNlcl9yZXZpZXdzX2VudHJ5LmpzeCc7XG5cbmNvbnN0IFJlYWN0ID0gcmVxdWlyZSgncmVhY3QnKTtcblxuXG5mdW5jdGlvbiBVc2VyUmV2aWV3cyhwcm9wcykge1xuICByZXR1cm4gPHVsPlxuICAgICAgICAgICA8VXNlclJldmlld3NFbnRyeSAvPlxuICAgICAgICAgPC91bD47XG59XG5cbmV4cG9ydCBkZWZhdWx0IFVzZXJSZXZpZXdzO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTtBQUNBOzs7OztBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQUE7QUFBQTtBQUNBO0FBREE7QUFHQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./client/src/components/user_reviews.jsx\n");
+
+/***/ }),
+
 /***/ "./client/src/index.jsx":
 /*!******************************!*\
   !*** ./client/src/index.jsx ***!
@@ -94,7 +166,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar App = function (_React$Component) {\n  _inherits(App, _React$Component);\n\n  function App() {\n    _classCallCheck(this, App);\n\n    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));\n  }\n\n  _createClass(App, [{\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        'testing skeleton'\n      );\n    }\n  }]);\n\n  return App;\n}(React.Component);\n\nReactDOM.render(React.createElement(App, null), document.getElementById('app'));//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2luZGV4LmpzeC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9jbGllbnQvc3JjL2luZGV4LmpzeD85MzM1Il0sInNvdXJjZXNDb250ZW50IjpbImNvbnN0IFJlYWN0ID0gcmVxdWlyZSgncmVhY3QnKTtcbmNvbnN0IFJlYWN0RE9NID0gcmVxdWlyZSgncmVhY3QtZG9tJyk7XG5cbmNsYXNzIEFwcCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gIHJlbmRlcigpIHtcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdj5cbiAgICAgIHRlc3Rpbmcgc2tlbGV0b25cbiAgICAgIDwvZGl2PlxuICAgICk7XG4gIH1cbn1cblJlYWN0RE9NLnJlbmRlcig8QXBwIC8+LCBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYXBwJykpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7Ozs7Ozs7Ozs7O0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBSUE7Ozs7QUFQQTtBQUNBO0FBUUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./client/src/index.jsx\n");
+eval("\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _avg_rating = __webpack_require__(/*! ./components/avg_rating.jsx */ \"./client/src/components/avg_rating.jsx\");\n\nvar _avg_rating2 = _interopRequireDefault(_avg_rating);\n\nvar _ratings = __webpack_require__(/*! ./components/ratings.jsx */ \"./client/src/components/ratings.jsx\");\n\nvar _ratings2 = _interopRequireDefault(_ratings);\n\nvar _search = __webpack_require__(/*! ./components/search.jsx */ \"./client/src/components/search.jsx\");\n\nvar _search2 = _interopRequireDefault(_search);\n\nvar _total_number_reviews = __webpack_require__(/*! ./components/total_number_reviews.jsx */ \"./client/src/components/total_number_reviews.jsx\");\n\nvar _total_number_reviews2 = _interopRequireDefault(_total_number_reviews);\n\nvar _user_reviews = __webpack_require__(/*! ./components/user_reviews.jsx */ \"./client/src/components/user_reviews.jsx\");\n\nvar _user_reviews2 = _interopRequireDefault(_user_reviews);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n// import UserReviewsEntry from './components/user_reviews_entry.jsx';\n\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar App = function (_React$Component) {\n  _inherits(App, _React$Component);\n\n  function App() {\n    _classCallCheck(this, App);\n\n    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));\n  }\n\n  _createClass(App, [{\n    key: 'render',\n    value: function render() {\n      return React.createElement(\n        'div',\n        null,\n        React.createElement(_total_number_reviews2.default, null),\n        React.createElement(_avg_rating2.default, null),\n        React.createElement(_search2.default, null),\n        React.createElement(_ratings2.default, null),\n        React.createElement(_user_reviews2.default, null)\n      );\n    }\n  }]);\n\n  return App;\n}(React.Component);\n\nReactDOM.render(React.createElement(App, null), document.getElementById('app'));//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jbGllbnQvc3JjL2luZGV4LmpzeC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9jbGllbnQvc3JjL2luZGV4LmpzeD85MzM1Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBBdmdSYXRpbmcgZnJvbSAnLi9jb21wb25lbnRzL2F2Z19yYXRpbmcuanN4JztcbmltcG9ydCBSYXRpbmdzIGZyb20gJy4vY29tcG9uZW50cy9yYXRpbmdzLmpzeCc7XG5pbXBvcnQgU2VhcmNoIGZyb20gJy4vY29tcG9uZW50cy9zZWFyY2guanN4JztcbmltcG9ydCBUb3RhbE51bWJlclJldmlld3MgZnJvbSAnLi9jb21wb25lbnRzL3RvdGFsX251bWJlcl9yZXZpZXdzLmpzeCc7XG5pbXBvcnQgVXNlclJldmlld3MgZnJvbSAnLi9jb21wb25lbnRzL3VzZXJfcmV2aWV3cy5qc3gnO1xuLy8gaW1wb3J0IFVzZXJSZXZpZXdzRW50cnkgZnJvbSAnLi9jb21wb25lbnRzL3VzZXJfcmV2aWV3c19lbnRyeS5qc3gnO1xuXG5jb25zdCBSZWFjdCA9IHJlcXVpcmUoJ3JlYWN0Jyk7XG5jb25zdCBSZWFjdERPTSA9IHJlcXVpcmUoJ3JlYWN0LWRvbScpO1xuXG5jbGFzcyBBcHAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG4gICAgICAgIDxUb3RhbE51bWJlclJldmlld3MgLz5cbiAgICAgICAgPEF2Z1JhdGluZyAvPlxuICAgICAgICA8U2VhcmNoIC8+XG4gICAgICAgIDxSYXRpbmdzIC8+XG4gICAgICAgIDxVc2VyUmV2aWV3cyAvPlxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfVxufVxuUmVhY3RET00ucmVuZGVyKDxBcHAgLz4sIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhcHAnKSk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7Ozs7Ozs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7Ozs7Ozs7Ozs7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFMQTtBQVFBOzs7O0FBWEE7QUFDQTtBQVlBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./client/src/index.jsx\n");
 
 /***/ }),
 
