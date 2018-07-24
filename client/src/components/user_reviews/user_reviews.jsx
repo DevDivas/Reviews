@@ -1,4 +1,4 @@
-import UserReviewsEntry from './User_reviews_entry.jsx';
+import UserReviewsEntry from '../user_reviews_entry/user_reviews_entry.jsx';
 
 const React = require('react');
 
