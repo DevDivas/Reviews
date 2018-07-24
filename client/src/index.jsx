@@ -7,12 +7,26 @@ import UserReviews from './components/user_reviews/user_reviews.jsx';
 
 const React = require('react');
 const ReactDOM = require('react-dom');
+const axios = require('axios');
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data: [],
+    };
+  }
+
+  componentDidMount() {
+    axios.get('/rooms/2/reviews')
+      .then((response) => {
+        this.setState({ data: response.data });
+      });
+  }
   render() {
     return (
       <div>
-        <TotalNumberReviews />
+        <TotalNumberReviews numberOfReviews={this.state.data.length} />
         <AvgRating />
         <Search />
         <Ratings />
