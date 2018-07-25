@@ -27,7 +27,7 @@ class App extends React.Component {
     return (
       <div>
         <TotalNumberReviews numberOfReviews={this.state.data.length} />
-        <AvgRating />
+        <AvgRating data={this.state.data} />
         <Search />
         <Ratings />
         <UserReviews />
