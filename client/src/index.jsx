@@ -21,6 +21,9 @@ class App extends React.Component {
     axios.get('/rooms/2/reviews')
       .then((response) => {
         this.setState({ data: response.data });
+      })
+      .catch(function (error) {
+        console.error(error);
       });
   }
   render() {
