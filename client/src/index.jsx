@@ -1,5 +1,5 @@
 import AvgRating from './components/avg_rating/avg_rating.js';
-import Ratings from './components/ratings/ratings.js';
+import Ratings from './components/ratings/ratings.jsx';
 import Search from './components/search/search.js';
 import TotalNumberReviews from './components/total_number_reviews/total_number_reviews.js';
 import UserReviews from './components/user_reviews/user_reviews.js';
@@ -32,7 +32,7 @@ class App extends React.Component {
         <TotalNumberReviews numberOfReviews={this.state.data.length} />
         <AvgRating data={this.state.data} />
         <Search />
-        <Ratings />
+        <Ratings data={this.state.data}/>
         <UserReviews />
       </div>
     );
