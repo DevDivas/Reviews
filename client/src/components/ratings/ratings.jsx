@@ -1,44 +1,45 @@
 const React = require('react');
 
 const Ratings = (props) => {
+  const getAverage = (fields) => {
+    return (
+      Math.round((props.data.map(data => data[fields])
+        .reduce((acc, cur) => acc + cur)) / props.data.length)
+    );
+  };
+
   return (
     <div>
     Ratings
       <div>
       Accuracy
         {props.data.length !== 0
-          && Math.round((props.data.map(data => data.accuracy)
-            .reduce((acc, cur) => acc + cur)) / props.data.length)}
+          && getAverage('accuracy')}
       </div>
       <div>
       Communication
         {props.data.length !== 0
-          && Math.round((props.data.map(data => data.communication)
-            .reduce((acc, cur) => acc + cur)) / props.data.length)}
+          && getAverage('communication')}
       </div>
       <div>
       Cleanliness
         {props.data.length !== 0
-          && Math.round((props.data.map(data => data.cleanliness)
-            .reduce((acc, cur) => acc + cur)) / props.data.length)}
+          && getAverage('cleanliness')}
       </div>
       <div>
       Location
         {props.data.length !== 0
-          && Math.round((props.data.map(data => data.location)
-            .reduce((acc, cur) => acc + cur)) / props.data.length)}
+          && getAverage('location')}
       </div>
       <div>
       Check-in
         {props.data.length !== 0
-          && Math.round((props.data.map(data => data.check_in)
-            .reduce((acc, cur) => acc + cur)) / props.data.length)}
+          && getAverage('check_in')}
       </div>
       <div>
       Value
         {props.data.length !== 0
-          && Math.round((props.data.map(data => data.value)
-            .reduce((acc, cur) => acc + cur)) / props.data.length)}
+          && getAverage('value')}
       </div>
     </div>
   );
