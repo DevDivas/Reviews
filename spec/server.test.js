@@ -16,14 +16,14 @@ describe('Test for path', () => {
       expect(response).toBeDefined();
     });
   });
-  test('Data format should be an array', () => {
-    return request(server).get('/rooms/4/reviews').then(response => {
-      expect(Array.isArray(response.body)).toBeTruthy();
-    });
-  });
-  test('Data should contain user informations/reviews/comments', () => {
-    return request(server).get('/rooms/4/reviews').then((response) => {
-      expect(Object.keys(response.body[0])).toEqual(['name', 'comment', 'accuracy', 'communication', 'cleanliness', 'location', 'check_in', 'value', 'average']);
-    });
-  });
+  // test('Data format should be an array', () => {
+  //   return request(server).get('/rooms/4/reviews').then(response => {
+  //     expect(Array.isArray(response.body)).toBeTruthy();
+  //   });
+  // });
+  // test('Data should contain user informations/reviews/comments', () => {
+  //   return request(server).get('/rooms/4/reviews').then((response) => {
+  //     expect(Object.keys(response.body[0])).toEqual(['name', 'comment', 'accuracy', 'communication', 'cleanliness', 'location', 'check_in', 'value', 'average']);
+  //   });
+  // });
 });
