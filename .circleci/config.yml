@@ -13,9 +13,6 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       - image: circleci/mysql:8.0.11
-          environment:
-            - MYSQL_ROOT_PASSWORD=root
-            - MYSQL_DATABASE=reviews
 
     steps:
       - checkout
