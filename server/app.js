@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/../public'));
 
 app.get('/rooms/:room_id/reviews', (req, res) => {
   db.getReviews(req.params.room_id, (err, results) => {
-    if (err) console.error(err);
+    if (err) res.status(500).send();
     res.status(201).send(results);
   });
 });
