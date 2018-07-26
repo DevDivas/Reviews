@@ -18,7 +18,7 @@ jobs:
       - checkout
       # run tests!
       - run: npm install
-      - run: npm start
+      - run: node server/index.js
       - run: npm test
 
 
