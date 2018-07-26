@@ -12,12 +12,22 @@ jobs:
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
+      - image: circleci/mysql:8.0.11
 
     steps:
       - checkout
-      # run tests!
-      - run: npm install
-      - run: npm test
-
-
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@6.2.0'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: test
+          command: npm test
