@@ -15,17 +15,23 @@ class App extends React.Component {
     this.state = {
       data: [],
     };
+    this.getData = this.getData.bind(this);
   }
 
   componentDidMount() {
+    this.getData();
+  }
+
+  getData() {
     axios.get('/rooms/2/reviews')
       .then((response) => {
         this.setState({ data: response.data });
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.error(error);
       });
   }
+
   render() {
     return (
       <div>
