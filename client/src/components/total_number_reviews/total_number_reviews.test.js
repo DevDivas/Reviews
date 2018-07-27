@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jest-enzyme';
 import { shallow } from 'enzyme';
-import TotalNumberReviews from './total_number_reviews.js';
+import TotalNumberReviews from './total_number_reviews.jsx';
 
 describe('TotalNumberReviews', () => {
 
