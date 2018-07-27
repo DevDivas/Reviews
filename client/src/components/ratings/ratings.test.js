@@ -2,55 +2,10 @@ import React from 'react';
 import 'jest-enzyme';
 import { shallow } from 'enzyme';
 import Ratings from './ratings.jsx';
+import fakeData from '../../fakeData';
 
 describe('Ratings', () => {
 
-  const fakeData = [
-    {
-      name: 'Hyuk',
-      comment: 'comment',
-      accuracy: 3,
-      communication: 4,
-      cleanliness: 5,
-      location: 2,
-      check_in: 5,
-      value: 4,
-      average: 4,
-    },
-    {
-      name: 'Allison',
-      comment: 'comment',
-      accuracy: 1,
-      communication: 3,
-      cleanliness: 2,
-      location: 4,
-      check_in: 5,
-      value: 2,
-      average: 3,
-    },
-    {
-      name: 'Thaki',
-      comment: 'comment',
-      accuracy: 4,
-      communication: 1,
-      cleanliness: 5,
-      location: 2,
-      check_in: 4,
-      value: 1,
-      average: 3,
-    },
-    {
-      name: 'Brian',
-      comment: 'comment',
-      accuracy: 5,
-      communication: 5,
-      cleanliness: 5,
-      location: 1,
-      check_in: 2,
-      value: 4,
-      average: 4,
-    },
-  ];
   const props = { data: fakeData };
   const wrap = shallow(<Ratings {...props} />);
   // wrap.setProps({ data: fakeData });
