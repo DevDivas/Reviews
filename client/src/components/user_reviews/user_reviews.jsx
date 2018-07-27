@@ -21,12 +21,12 @@ class UserReviews extends React.Component {
     if (pageNumber === pageOne || pageNumber === numberOfPages) {
       return true;
     }
-    if (pageNumber < currentPage
-      && (currentPage - pageNumber) > 1
+    if ((currentPage - pageNumber) > 1
       && (numberOfPages - pageNumber) !== 2) {
       return false;
     }
-    if (pageNumber > currentPage && (pageNumber - currentPage) > 1 && (pageNumber - 1) !== 2) {
+    if ((pageNumber - currentPage) > 1
+      && (pageNumber - 1) !== 2) {
       return false;
     }
     return true;
@@ -36,25 +36,25 @@ class UserReviews extends React.Component {
     return (
       <div>
         <ul>
-          {this.props.data.map((data) => {
+          {this.props.data.map((data, ind) => {
             if (data.pageNumber === this.state.page) {
               return (
-                <UserReviewsEntry key={this.props.data.indexOf(data)} review={data} keywords={this.props.keywords} />
+                <UserReviewsEntry key={ind.toString()} review={data} keywords={this.props.keywords} />
               );
             }
           })}
         </ul>
         <div>
-          {this.props.data.map((data) => {
-            const pageNumber = this.props.data.indexOf(data) / 5 + 1;
+          {this.props.data.map((data, ind) => {
+            const pageNumber = ind / 5 + 1;
             const currentPage = this.state.page;
             const numberOfPages = Math.ceil((this.props.data.length) / 5);
             const pageOne = 1;
-            if (this.props.data.indexOf(data) % 5 === 0
+            if (ind % 5 === 0
                 && this.pageButton(pageNumber, currentPage, numberOfPages, pageOne)) {
               return (
-                <button type="button" onClick={this.handleClick} key={this.props.data.indexOf(data)}>
-                  {this.props.data.indexOf(data) / 5 + 1}
+                <button type="button" onClick={this.handleClick} key={ind.toString()}>
+                  {pageNumber}
                 </button>
               );
             }
