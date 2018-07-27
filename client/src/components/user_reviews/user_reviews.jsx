@@ -7,7 +7,7 @@ const UserReviews = (props) => {
   return (
     <ul>
       {props.data.map((data) => {
-        return <UserReviewsEntry key={props.data.indexOf(data)} review={data} />;
+        return <UserReviewsEntry key={props.data.indexOf(data)} review={data} keywords={props.keywords} />;
       })}
     </ul>
   );

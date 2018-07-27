@@ -5,9 +5,8 @@ import UserReviewsEntry from './user_reviews_entry.jsx';
 import fakeData from '../../fakeData';
 
 describe('UserReviewsEntry', () => {
-  const props = { review: fakeData[0] };
+  const props = { review: fakeData[0], keywords: '' };
   const wrap = shallow(<UserReviewsEntry {...props} />);
-  console.log(wrap.props())
 
   it('should exists', () => {
     expect(wrap.exists()).toBeTruthy();
@@ -18,8 +17,8 @@ describe('UserReviewsEntry', () => {
   it('should render comment', () => {
     expect(
       wrap.containsMatchingElement(
-        <div>comment</div>
-      )
+        <div>comment</div>,
+      ),
     ).toBeTruthy();
-      });
+  });
 });
