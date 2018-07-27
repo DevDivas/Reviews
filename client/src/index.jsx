@@ -18,6 +18,7 @@ class App extends React.Component {
     };
     this.getData = this.getData.bind(this);
     this.search = this.search.bind(this);
+    this.splitPages = this.splitPages.bind(this);
   }
 
   componentDidMount() {
@@ -27,11 +28,25 @@ class App extends React.Component {
   getData() {
     axios.get('/rooms/2/reviews')
       .then((response) => {
-        this.setState({ data: response.data });
+        this.splitPages(response.data);
+        // this.setState({ data: response.data });
       })
       .catch((error) => {
         console.error(error);
       });
+  }
+
+  splitPages(data) {
+    const result = [];
+    let pageNumber = 1;
+    for (let i = 0; i < data.length; i++) {
+      if (i % 5 === 0 && i !== 0) {
+        pageNumber += 1;
+      }
+      data[i].pageNumber = pageNumber;
+      result.push(data[i]);
+    }
+    this.setState({ data: result });
   }
 
   search(val) {
