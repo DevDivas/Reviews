@@ -1,4 +1,4 @@
-import AvgRating from './components/avg_rating/avg_rating.js';
+import AvgRating from './components/avg_rating/avg_rating.jsx';
 import Ratings from './components/ratings/ratings.jsx';
 import Search from './components/search/search.js';
 import TotalNumberReviews from './components/total_number_reviews/total_number_reviews.js';
