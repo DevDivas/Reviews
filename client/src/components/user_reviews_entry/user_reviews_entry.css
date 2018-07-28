@@ -20,7 +20,8 @@
 .name {
   display: inline-block;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 900;
+  color: #484848;
 }
 
 .date {

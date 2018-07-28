@@ -23,7 +23,8 @@
  
 .starsOuter::before {
   font-family: FontAwesome;
-  content: "\f006 \f006 \f006 \f006 \f006";
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #dcdfe5;
 }
  
 .starsInner {
