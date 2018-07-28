@@ -1,0 +1,31 @@
+.avgRating {
+  display: inline-block;
+}
+.starsOuter {
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+}
+ 
+.starsOuter::before {
+  font-family: FontAwesome;
+  content: "\f006 \f006 \f006 \f006 \f006";
+  font-size: 20px;
+}
+ 
+.starsInner {
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+ 
+.starsInner::before {
+  font-family: FontAwesome;
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #007D8C;
+  font-size: 20px;
+}

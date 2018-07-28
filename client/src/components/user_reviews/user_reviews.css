@@ -1,0 +1,12 @@
+.button {
+  display: inline-block;
+  margin-right: 30px;
+  font-size: 14px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}

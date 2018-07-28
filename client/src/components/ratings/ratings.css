@@ -1,0 +1,41 @@
+.ratingsContainer {
+  margin-top: 20px;
+}
+
+.tableOne {
+  display: inline-block;
+  margin-right: 100px;
+}
+
+.tableTwo {
+  display: inline-block;
+}
+
+.rating {
+  line-height:30px;
+}
+
+.starsOuter {
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+}
+ 
+.starsOuter::before {
+  font-family: FontAwesome;
+  content: "\f006 \f006 \f006 \f006 \f006";
+}
+ 
+.starsInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+ 
+.starsInner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  color: #007D8C;
+}

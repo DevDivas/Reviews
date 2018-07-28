@@ -3,7 +3,7 @@ import Ratings from './components/ratings/ratings.jsx';
 import Search from './components/search/search.jsx';
 import TotalNumberReviews from './components/total_number_reviews/total_number_reviews.jsx';
 import UserReviews from './components/user_reviews/user_reviews.jsx';
-// import UserReviewsEntry from './components/user_reviews_entry.jsx';
+import style from './index.css'
 
 const React = require('react');
 const ReactDOM = require('react-dom');
@@ -56,11 +56,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <TotalNumberReviews numberOfReviews={this.state.data.length} />
-        <AvgRating data={this.state.data} />
-        <Search search={this.search}/>
-        <Ratings data={this.state.data} />
-        <UserReviews data={this.state.data} keywords={this.state.keywords}/>
+        <div className={style.topContainer}>
+          <TotalNumberReviews numberOfReviews={this.state.data.length} />
+          <AvgRating data={this.state.data} />
+          <Search search={this.search} />
+        </div>
+        <div>
+          <Ratings data={this.state.data} />
+        </div>
+        <UserReviews data={this.state.data} keywords={this.state.keywords} />
       </div>
     );
   }

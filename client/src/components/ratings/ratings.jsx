@@ -1,47 +1,95 @@
 const React = require('react');
+import style from './ratings.css';
 
 const Ratings = (props) => {
   const getAverage = (fields) => {
-    return (
-      Math.round((props.data.map(data => data[fields])
-        .reduce((acc, cur) => acc + cur)) / props.data.length)
-    );
+    if (props.data.length !== 0) {
+      return (
+        (props.data.map(data => data[fields])
+          .reduce((acc, cur) => acc + cur)) / props.data.length
+      );
+    }
+  };
+
+  const starPercentage = (rating) => {
+    const stars = {
+      width: `${(rating * 20).toString()}%`,
+    };
+    return stars;
   };
 
   return (
-    <div>
-    Ratings
-      <div>
-      Accuracy
-        {props.data.length !== 0
-          && getAverage('accuracy')}
-      </div>
-      <div>
-      Communication
-        {props.data.length !== 0
-          && getAverage('communication')}
-      </div>
-      <div>
-      Cleanliness
-        {props.data.length !== 0
-          && getAverage('cleanliness')}
-      </div>
-      <div>
-      Location
-        {props.data.length !== 0
-          && getAverage('location')}
-      </div>
-      <div>
-      Check-in
-        {props.data.length !== 0
-          && getAverage('check_in')}
-      </div>
-      <div>
-      Value
-        {props.data.length !== 0
-          && getAverage('value')}
-      </div>
+    <div className={style.ratingsContainer}>
+      <table className={style.tableOne}>
+        <tbody>
+          <tr className={style.rating}>
+            <td>
+            Accuracy
+            </td>
+            <td>
+              <div className={style.starsOuter}>
+                <div className={style.starsInner} style={starPercentage(getAverage('accuracy'))} />
+              </div>
+            </td>
+          </tr>
+          <tr className={style.rating}>
+            <td>
+            Communication
+            </td>
+            <td>
+              <div className={style.starsOuter}>
+                <div className={style.starsInner} style={starPercentage(getAverage('communication'))} />
+              </div>
+            </td>
+          </tr>
+          <tr className={style.rating}>
+            <td>
+            Cleanliness
+            </td>
+            <td>
+              <div className={style.starsOuter}>
+                <div className={style.starsInner} style={starPercentage(getAverage('cleanliness'))} />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table className={style.tableTwo}>
+        <tbody>
+          <tr className={style.rating}>
+            <td>
+            Location
+            </td>
+            <td>
+              <div className={style.starsOuter}>
+                <div className={style.starsInner} style={starPercentage(getAverage('location'))} />
+              </div>
+            </td>
+          </tr>
+          <tr className={style.rating}>
+            <td>
+            Check-in
+            </td>
+            <td>
+              <div className={style.starsOuter}>
+                <div className={style.starsInner} style={starPercentage(getAverage('check_in'))} />
+              </div>
+            </td>
+          </tr>
+          <tr className={style.rating}>
+            <td>
+            Value
+            </td>
+            <td>
+              <div className={style.starsOuter}>
+                <div className={style.starsInner} style={starPercentage(getAverage('value'))} />
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
   );
 };
 

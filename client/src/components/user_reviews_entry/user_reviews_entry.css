@@ -1,0 +1,29 @@
+.reviews {
+  border-style: none none solid none;
+  border-width: 0.1px;
+  border-color: #dcdfe5;
+  margin-bottom: 20px;
+  /*list-style-type: none;*/
+}
+
+.picture {
+  float: left
+}
+
+.picture::before {
+  font-family: FontAwesome;
+  content: "\f007";
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+.name {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 13px;
+  margin-top: 5px;
+}

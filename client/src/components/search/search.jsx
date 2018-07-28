@@ -1,4 +1,5 @@
 const React = require('react');
+import style from './search.css';
 
 class Search extends React.Component {
   constructor(props) {
@@ -23,7 +24,12 @@ class Search extends React.Component {
   render() {
     const keywords = this.state.value;
     return (
-      <input value={keywords} onChange={this.handleChange} onKeyDown={this.pressEnter} />
+      <div className={style.search}>
+        <div className={style.glassContainer}>
+          <div className={style.glass} />
+        </div>
+        <input className={style.search_bar} value={keywords} onChange={this.handleChange} onKeyDown={this.pressEnter} placeholder="Search reviews" />
+      </div>
     );
   }
 }

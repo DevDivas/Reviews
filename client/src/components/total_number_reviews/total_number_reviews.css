@@ -1,4 +1,4 @@
-TotalNumberReviews div {
-  color: red;
-  margin-left: 100px;
+.TotalNumberReviews {
+  display: inline-block;
+  margin-right: 20px;
 }
