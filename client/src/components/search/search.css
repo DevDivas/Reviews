@@ -8,11 +8,13 @@
   /*text-align: center;*/
   margin-top: 20px;
   height: 30px;
-  width: 250px;
+  width: 220px;
 }
 
 .glassContainer {
   display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .glass::before {
