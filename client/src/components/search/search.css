@@ -1,0 +1,32 @@
+.search {
+  float: right;
+  /*display: inline-block;*/
+  /*position: relative;*/
+  border-style: solid;
+  border-color: #dcdfe5;
+  border-width: 0.9px;
+  /*text-align: center;*/
+  margin-top: 20px;
+  height: 30px;
+  width: 220px;
+}
+
+.glassContainer {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.glass::before {
+  font-family: FontAwesome;
+  content: "\f002";
+}
+
+.search_bar {
+  display: inline-block;
+  height: 28px;
+  /*width: 200px;*/
+  border: none;
+  margin: auto;
+  font-size: 15px;
+}

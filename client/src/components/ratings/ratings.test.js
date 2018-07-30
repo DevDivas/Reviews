@@ -14,25 +14,61 @@ describe('Ratings', () => {
   it('should exists', () => {
     expect(wrap.exists()).toBeTruthy();
   });
-  it('should have 6 childrens of each rating', () => {
-    expect(wrap.children().length).toEqual(7);
+  // it('should have 6 childrens of each rating', () => {
+  //   expect(wrap.children().length).toEqual(7);
+  // });
+  it('should have accuracy rating', () => {
+    expect(
+      wrap.containsMatchingElement(
+        <td>
+        Accuracy
+        </td>,
+      ),
+    ).toBeTruthy();
   });
-  it('should have 3 as rating for accuracy', () => {
-    expect(wrap.childAt(1).text()).toEqual('Accuracy3');
+  it('should render communication rating', () => {
+    expect(
+      wrap.containsMatchingElement(
+        <td>
+        Communication
+        </td>,
+      ),
+    ).toBeTruthy();
   });
-  it('should have 3 as rating for communication', () => {
-    expect(wrap.childAt(2).text()).toEqual('Communication3');
+  it('should render cleanliness rating', () => {
+    expect(
+      wrap.containsMatchingElement(
+        <td>
+        Cleanliness
+        </td>,
+      ),
+    ).toBeTruthy();
   });
-  it('should have 4 as rating for cleanliness', () => {
-    expect(wrap.childAt(3).text()).toEqual('Cleanliness4');
+  it('should render location rating', () => {
+    expect(
+      wrap.containsMatchingElement(
+        <td>
+        Location
+        </td>,
+      ),
+    ).toBeTruthy();
   });
-  it('should have 2 as rating for location', () => {
-    expect(wrap.childAt(4).text()).toEqual('Location2');
+  it('should render check_in rating', () => {
+    expect(
+      wrap.containsMatchingElement(
+        <td>
+        Check-in
+        </td>,
+      ),
+    ).toBeTruthy();
   });
-  it('should have 4 as rating for check_in', () => {
-    expect(wrap.childAt(5).text()).toEqual('Check-in4');
-  });
-  it('should have 3 as rating for value', () => {
-    expect(wrap.childAt(6).text()).toEqual('Value3');
+  it('should render value rating', () => {
+    expect(
+      wrap.containsMatchingElement(
+        <td>
+        Value
+        </td>,
+      ),
+    ).toBeTruthy();
   });
 });

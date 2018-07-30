@@ -1,4 +1,5 @@
 import UserReviewsEntry from '../user_reviews_entry/user_reviews_entry.jsx';
+import style from './user_reviews.css'
 
 const React = require('react');
 
@@ -21,6 +22,12 @@ class UserReviews extends React.Component {
     if (pageNumber === pageOne || pageNumber === numberOfPages) {
       return true;
     }
+    if (currentPage === 4 && pageNumber === 2) {
+      return true;
+    }
+    if (currentPage === numberOfPages - 3 && pageNumber === numberOfPages - 1) {
+      return true;
+    }
     if ((currentPage - pageNumber) > 1
       && (numberOfPages - pageNumber) !== 2) {
       return false;
@@ -34,8 +41,8 @@ class UserReviews extends React.Component {
 
   render() {
     return (
-      <div>
-        <ul>
+      <div className={style.reviewContainer}>
+        <div>
           {this.props.data.map((data, ind) => {
             if (data.pageNumber === this.state.page) {
               return (
@@ -43,7 +50,7 @@ class UserReviews extends React.Component {
               );
             }
           })}
-        </ul>
+        </div>
         <div>
           {this.props.data.map((data, ind) => {
             const pageNumber = ind / 5 + 1;
@@ -53,10 +60,16 @@ class UserReviews extends React.Component {
             if (ind % 5 === 0
                 && this.pageButton(pageNumber, currentPage, numberOfPages, pageOne)) {
               return (
-                <button type="button" onClick={this.handleClick} key={ind.toString()}>
+                <button className={style.button} type="button" onClick={this.handleClick} key={ind.toString()}>
                   {pageNumber}
                 </button>
               );
+            }
+            if (pageNumber - currentPage === 3) {
+              return <div className={style.button}>...</div>;
+            }
+            if (currentPage - pageNumber === 3) {
+              return <div className={style.button}>...</div>;
             }
           })}
         </div>
