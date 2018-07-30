@@ -1,13 +1,48 @@
 .button {
   display: inline-block;
   margin-right: 30px;
-  font-size: 14px;
+  font-size: 15px;
   padding: 0;
   border: none;
   background: none;
   color: #007D8C;
+  position: relative;
 }
 
 .button:hover {
   text-decoration: underline;
+}
+
+.leftBtn::before {
+  font-family: FontAwesome;
+  content: "\f053"
+}
+
+.leftBtn {
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.rightBtn::before {
+  font-family: FontAwesome;
+  content: "\f054"
+}
+
+.rightBtn {
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+}
+
+.currentPage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 15px;
+  color: #fff;
+  line-height: 30px;
+  text-align: center;
+  background: #007D8C
 }
