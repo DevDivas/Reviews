@@ -7,8 +7,12 @@
   border-width: 0.9px;
   /*text-align: center;*/
   margin-top: 20px;
-  height: 30px;
+  height: 31px;
   width: 220px;
+}
+
+.search:focus-within {
+  border-color: #007D8C;
 }
 
 .glassContainer {
@@ -22,11 +26,27 @@
   content: "\f002";
 }
 
+.clearButton::before {
+  font-family: FontAwesome;
+  content: "\f00d";
+}
+
+.clearButton {
+  border: none;
+}
+
+.clearButton:focus {
+  outline: none;
+}
+
 .search_bar {
   display: inline-block;
-  height: 28px;
-  /*width: 200px;*/
+  height: 29px;
   border: none;
   margin: auto;
-  font-size: 15px;
+  font-size: 14px;
+}
+
+.search_bar:focus {
+  outline: none;
 }

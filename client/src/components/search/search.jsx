@@ -1,5 +1,6 @@
-const React = require('react');
 import style from './search.css';
+
+const React = require('react');
 
 class Search extends React.Component {
   constructor(props) {
@@ -9,16 +10,22 @@ class Search extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.pressEnter = this.pressEnter.bind(this);
+    this.clearButton = this.clearButton.bind(this);
   }
 
   handleChange(e) {
     this.setState({ value: e.target.value });
+    // this.clearButton(e.target.value);
   }
 
   pressEnter(e) {
     if (e.keyCode === 13) {
       this.props.search(this.state.value);
     }
+  }
+
+  clearButton() {
+    this.setState({ value: '' });
   }
 
   render() {
@@ -28,7 +35,16 @@ class Search extends React.Component {
         <div className={style.glassContainer}>
           <div className={style.glass} />
         </div>
-        <input className={style.search_bar} value={keywords} onChange={this.handleChange} onKeyDown={this.pressEnter} placeholder="Search reviews" />
+        <input
+          className={style.search_bar}
+          value={this.state.value}
+          onChange={this.handleChange}
+          onKeyDown={this.pressEnter}
+          placeholder="Search reviews"
+        />
+        {keywords.length !== 0
+          && <button className={style.clearButton} type="button" onClick={this.clearButton} />
+        }
       </div>
     );
   }

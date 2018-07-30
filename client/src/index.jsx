@@ -14,7 +14,7 @@ class App extends React.Component {
     super();
     this.state = {
       data: [],
-      keywords: '',
+      searched: [],
     };
     this.getData = this.getData.bind(this);
     this.search = this.search.bind(this);
@@ -28,8 +28,11 @@ class App extends React.Component {
   getData() {
     axios.get('/rooms/2/reviews')
       .then((response) => {
-        this.splitPages(response.data);
-        // this.setState({ data: response.data });
+        this.setState({
+          data: this.splitPages(response.data),
+          searched: this.splitPages(response.data),
+        });
+        // this.splitPages(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -46,11 +49,16 @@ class App extends React.Component {
       data[i].pageNumber = pageNumber;
       result.push(data[i]);
     }
-    this.setState({ data: result });
+    return result;
   }
 
   search(val) {
-    this.setState({ keywords: val });
+    // this.state.data.map((data) => {
+    //   if (data.comment.includes(val))
+    // })
+    const result = this.splitPages(this.state.data.filter(data => data.comment.includes(val)));
+    this.setState({ searched: result });
+    // this.setState({ keywords: val });
   }
 
   render() {
@@ -64,7 +72,7 @@ class App extends React.Component {
         <div>
           <Ratings data={this.state.data} />
         </div>
-        <UserReviews data={this.state.data} keywords={this.state.keywords} />
+        <UserReviews data={this.state.searched} keywords={this.state.keywords} />
       </div>
     );
   }
