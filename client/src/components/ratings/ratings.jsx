@@ -1,5 +1,6 @@
-const React = require('react');
 import style from './ratings.css';
+
+const React = require('react');
 
 const Ratings = (props) => {
   const getAverage = (fields) => {

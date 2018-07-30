@@ -42,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
     "jest": "^23.4.1",
+    "jest-css-modules": "^1.1.0",
     "jest-environment-enzyme": "^6.0.2",
     "jest-enzyme": "^6.0.2",
     "mysql": "^2.16.0",
@@ -56,6 +57,7 @@
     "testEnvironmentOptions": {
       "enzymeAdapter": "react16"
     },
+    "transform": {".*": "<rootDir>/node_modules/jest-css-modules"},
     "moduleFileExtensions": [
       "js",
       "json",

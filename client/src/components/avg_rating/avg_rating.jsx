@@ -8,8 +8,8 @@ const AvgRating = (props) => {
   const getAverage = () => {
     if (props.data.length !== 0) {
       return (
-        (props.data.map(data => data.average)
-          .reduce((acc, cur) => acc + cur)) / props.data.length
+        (props.data.reduce((acc, cur) =>
+          ({ average: acc.average + cur.average }))).average / props.data.length
       );
     }
   };
@@ -23,9 +23,9 @@ const AvgRating = (props) => {
 
   return (
     <div className={style.avgRating}>
-        <div className={style.starsOuter}>
-          <div className={style.starsInner} style={starPercentage(getAverage())} />
-        </div>
+      <div className={style.starsOuter}>
+        <div className={style.starsInner} style={starPercentage(getAverage())} />
+      </div>
     </div>
   );
 };

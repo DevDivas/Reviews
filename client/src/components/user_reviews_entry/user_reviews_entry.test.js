@@ -11,13 +11,30 @@ describe('UserReviewsEntry', () => {
   it('should exists', () => {
     expect(wrap.exists()).toBeTruthy();
   });
-  it('should render name, picture, date', () => {
-    expect(wrap.props().children.includes('pic', 'Hyuk', 'Sat Jul 07 1962 01:30:17 GMT-')).toBeTruthy();
+  it('should render name', () => {
+    expect(
+      wrap.containsMatchingElement(
+        <div>
+        Hyuk
+        </div>,
+      ),
+    ).toBeTruthy();
+  });
+  it('should render date', () => {
+    expect(
+      wrap.containsMatchingElement(
+        <div>
+        Jul 1962
+        </div>
+      ),
+    ).toBeTruthy();
   });
   it('should render comment', () => {
     expect(
       wrap.containsMatchingElement(
-        <div>comment</div>,
+        <p>
+        comment
+        </p>,
       ),
     ).toBeTruthy();
   });
