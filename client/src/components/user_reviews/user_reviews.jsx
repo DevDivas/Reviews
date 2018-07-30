@@ -12,6 +12,9 @@ class UserReviews extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
     this.pageButton = this.pageButton.bind(this);
+    this.leftBtn = this.leftBtn.bind(this);
+    this.rightBtn = this.rightBtn.bind(this);
+    this.highlight = this.highlight.bind(this);
   }
 
   handleClick(e) {
@@ -39,6 +42,25 @@ class UserReviews extends React.Component {
     return true;
   }
 
+  leftBtn() {
+    if (this.state.page !== 1) {
+      this.setState({ page : this.state.page - 1})
+    }
+  }
+
+  rightBtn() {
+    if (this.state.page !== Math.ceil((this.props.data.length) / 5)) {
+      this.setState({ page : this.state.page + 1})
+    }
+  }
+
+  highlight(pageNumber) {
+    if (pageNumber === this.state.page) {
+      return <div className={style.currentPage}>{pageNumber}</div>;
+    }
+    return <div>{pageNumber}</div>
+  }
+
   render() {
     return (
       <div className={style.reviewContainer}>
@@ -52,6 +74,7 @@ class UserReviews extends React.Component {
           })}
         </div>
         <div>
+          <button className={style.leftBtn} onClick={this.leftBtn} />
           {this.props.data.map((data, ind) => {
             const pageNumber = ind / 5 + 1;
             const currentPage = this.state.page;
@@ -61,7 +84,7 @@ class UserReviews extends React.Component {
                 && this.pageButton(pageNumber, currentPage, numberOfPages, pageOne)) {
               return (
                 <button className={style.button} type="button" onClick={this.handleClick} key={ind.toString()}>
-                  {pageNumber}
+                  {this.highlight(pageNumber)}
                 </button>
               );
             }
@@ -72,6 +95,7 @@ class UserReviews extends React.Component {
               return <div className={style.button}>...</div>;
             }
           })}
+          <button className={style.rightBtn} onClick={this.rightBtn} />
         </div>
       </div>
     );

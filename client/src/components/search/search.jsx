@@ -1,5 +1,6 @@
-const React = require('react');
 import style from './search.css';
+
+const React = require('react');
 
 class Search extends React.Component {
   constructor(props) {
