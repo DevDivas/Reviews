@@ -59,3 +59,14 @@
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
+
+.readMore {
+  color: blue;
+  border: none;
+  margin-left: 0px;
+  font-size: 15px;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}

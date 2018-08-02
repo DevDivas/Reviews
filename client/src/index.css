@@ -3,3 +3,28 @@
   border-width: 0.1px;
   border-color: #dcdfe5;
 }
+
+.backBtn {
+  border: none;
+  float: right;
+  color: #007D8C;
+  font-size: 15px;
+}
+
+.backBtn:hover {
+  text-decoration: underline;
+}
+
+.backBtnContainer {
+  border-style: none none solid none;
+  border-width: 0.1px;
+  border-color: #dcdfe5;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  height: 20%;
+}
+
+.backBtnString {
+  margin-bottom: 20px;
+  display: inline-block;
+}
