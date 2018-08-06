@@ -1,13 +1,13 @@
 import React from 'react';
 import 'jest-enzyme';
 import { shallow } from 'enzyme';
-import AvgRating from './avg_rating';
+import ClosingPopup from './closing_popup';
 import fakeData from '../../fakeData';
 
-describe('AvgRating', () => {
+describe('ClosingPopup', () => {
 
   const props = { data: fakeData };
-  const wrap = shallow(<AvgRating {...props} />);
+  const wrap = shallow(<ClosingPopup {...props} />);
 
   it('should exists', () => {
     expect(wrap.exists()).toBeTruthy();
@@ -17,7 +17,12 @@ describe('AvgRating', () => {
       wrap.containsMatchingElement(
         <div>
           <div>
+            <button />
+            <h2>
+            Thank You
+            </h2>
             <div>
+            These reports help make Airbnb better for everyone, so we take them seriously. We’ll reach out if we have questions about your report.
             </div>
           </div>
         </div>

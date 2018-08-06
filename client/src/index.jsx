@@ -13,6 +13,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      roomid: /\d+/g.exec(window.location.pathname)[0],
       data: [],
       searchedData: 1,
       keywords: '',
@@ -28,7 +29,8 @@ class App extends React.Component {
   }
 
   getData() {
-    axios.get('/rooms/2/reviews')
+    const roomid = this.state.roomid;
+    axios.get(`/rooms/${roomid}/reviews`)
       .then((response) => {
         this.setState({
           data: this.splitPages(response.data),
@@ -75,7 +77,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={style.box}>
         <div className={style.topContainer}>
           <TotalNumberReviews numberOfReviews={this.state.data.length} />
           <AvgRating data={this.state.data} />
@@ -112,4 +114,4 @@ class App extends React.Component {
     );
   }
 }
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('reviews'));

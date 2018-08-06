@@ -30,13 +30,13 @@ CREATE TABLE reviews (
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
-LOAD DATA LOCAL INFILE './users.csv' 
+LOAD DATA LOCAL INFILE '../var/lib/mysql/users.csv' 
 INTO TABLE users 
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
-LOAD DATA LOCAL INFILE './reviews.csv' 
+LOAD DATA LOCAL INFILE '../var/lib/mysql/reviews.csv' 
 INTO TABLE reviews 
 FIELDS TERMINATED BY ',' 
 LINES TERMINATED BY '\n'

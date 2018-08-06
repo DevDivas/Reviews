@@ -1,13 +1,13 @@
 import React from 'react';
 import 'jest-enzyme';
 import { shallow } from 'enzyme';
-import AvgRating from './avg_rating';
+import Popup from './popup';
 import fakeData from '../../fakeData';
 
-describe('AvgRating', () => {
+describe('Popup', () => {
 
   const props = { data: fakeData };
-  const wrap = shallow(<AvgRating {...props} />);
+  const wrap = shallow(<Popup />).setState({ selected: '', submit: false });
 
   it('should exists', () => {
     expect(wrap.exists()).toBeTruthy();
@@ -15,12 +15,9 @@ describe('AvgRating', () => {
   it('should exists', () => {
     expect(
       wrap.containsMatchingElement(
-        <div>
-          <div>
-            <div>
-            </div>
-          </div>
-        </div>
+          <h2>
+          Do you want to anonymously report this review?
+          </h2>
       )
     ).toBeTruthy();
   });

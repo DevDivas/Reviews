@@ -8,10 +8,10 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "node server/index.js",
     "seed": "node data-generator.js | mysql --local-infile -u root -p < schema.sql",
     "react-dev": "webpack -d --watch",
-    "test": "jest --forceExit"
+    "test": "jest --coverage --forceExit"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
