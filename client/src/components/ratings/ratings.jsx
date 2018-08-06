@@ -19,13 +19,21 @@ const Ratings = (props) => {
     return stars;
   };
 
+  const makeSpaces = (num) => {
+    let result = '';
+    for (let i = 0; i < num; i++) {
+      result += '&nbsp;';
+    }
+    return result;
+  };
+
   return (
     <div className={style.ratingsContainer}>
       <table className={style.tableOne}>
         <tbody>
           <tr className={style.rating}>
             <td>
-            Accuracy
+            Accuracy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </td>
             <td>
               <div className={style.starsOuter}>
@@ -59,7 +67,7 @@ const Ratings = (props) => {
         <tbody>
           <tr className={style.rating}>
             <td>
-            Location
+            Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </td>
             <td>
               <div className={style.starsOuter}>

@@ -4,11 +4,11 @@
 
 .tableOne {
   display: inline-block;
-  margin-right: 100px;
 }
 
 .tableTwo {
-  display: inline-block;
+  /*display: inline-block;*/
+  float: right;
 }
 
 .rating {
