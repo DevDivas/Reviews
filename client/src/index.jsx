@@ -35,7 +35,6 @@ class App extends React.Component {
         this.setState({
           data: this.splitPages(response.data),
         });
-        // this.splitPages(response.data);
       })
       .catch((error) => {
         console.error(error);
@@ -59,13 +58,15 @@ class App extends React.Component {
   }
 
   backBtn() {
-    this.setState({ searchedData: 1 });
+    this.setState({ searchedData: 1, data: this.splitPages(this.state.data), keywords: '' });
+    this.clearVal();
+  }
+
+  clearVal() {
+
   }
 
   search(val) {
-    // this.state.data.map((data) => {
-    //   if (data.comment.includes(val))
-    // })
     const result = this.splitPages(this.state.data.filter(data => data.comment.includes(val)));
     if (result.length !== 0) {
       this.setState({ searchedData: result });
@@ -81,7 +82,7 @@ class App extends React.Component {
         <div className={style.topContainer}>
           <TotalNumberReviews numberOfReviews={this.state.data.length} />
           <AvgRating data={this.state.data} />
-          <Search search={this.search} value={this.state.searchedData} />
+          <Search search={this.search} value={this.state.searchedData} clearVal={this.clearVal} />
         </div>
         <div>
           {this.state.searchedData === 1
@@ -91,7 +92,7 @@ class App extends React.Component {
           && (
             <div className={style.backBtnContainer}>
               <div className={style.backBtnString}>
-                0 guests have mentioned “{this.state.keywords}”
+                none of our guests have mentioned “{this.state.keywords}”
               </div>
               <button className={style.backBtn} type="button" onClick={this.backBtn}>Back to all reviews</button>
             </div>
@@ -105,7 +106,10 @@ class App extends React.Component {
               <button className={style.backBtn} type="button" onClick={this.backBtn}>Back to all reviews</button>
             </div>
           )}
-        {Array.isArray(this.state.searchedData) === true ? (
+        {
+          this.state.searchedData === 'nothing' ? (
+          <div></div>
+        ) : Array.isArray(this.state.searchedData) === true ? (
           <UserReviews data={this.state.searchedData} keywords={this.state.keywords} />
         ) : (
           <UserReviews data={this.state.data} keywords={this.state.keywords} />

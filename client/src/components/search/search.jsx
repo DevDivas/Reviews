@@ -15,7 +15,6 @@ class Search extends React.Component {
 
   handleChange(e) {
     this.setState({ value: e.target.value });
-    // this.clearButton(e.target.value);
   }
 
   pressEnter(e) {
