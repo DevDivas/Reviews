@@ -59,11 +59,6 @@ class App extends React.Component {
 
   backBtn() {
     this.setState({ searchedData: 1, data: this.splitPages(this.state.data), keywords: '' });
-    this.clearVal();
-  }
-
-  clearVal() {
-
   }
 
   search(val) {
